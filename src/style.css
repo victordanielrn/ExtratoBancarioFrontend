@@ -1,0 +1,110 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#000000, #00000098);
+}
+
+.title {
+  font-size: 50px;
+  color: #fcf8f8;
+  animation: flipTitle 2s;
+}
+
+@keyframes flipTitle {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.containerInput {
+  background-color: rgba(212, 199, 199, 0.2);
+  padding: 20px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(255, 254, 254, 0.918);
+}
+
+.containerInput input {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: rgb(251, 253, 255);
+  outline: none;
+  margin-right: 8px;
+}
+
+.containerInput input::placeholder {
+  color: #f1f1f1;
+}
+
+.buttonSearch {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.transaction-list {  
+  display: table;
+  box-shadow: 1px 3px 8px rgba(235, 228, 228, 0.5);
+  width: 25%;
+  margin-top: 10px;
+}
+
+.transaction {
+  display: table-row;
+  background-color: transparent;
+  box-shadow: 1px 3px 8px rgba(233, 226, 226, 0.5);
+}
+
+.transaction div {
+  display: table-cell;
+  padding: 10px;
+  margin: 10px;
+}
+
+.transaction-date {
+  font-size: 18px;
+}
+
+.transaction-value {
+  font-size: 24px;
+  color: #181717;
+}
+
+.transaction-type {
+  font-size: 20px;
+  color: #131212;
+}
+
+.transaction-operator {
+  font-size: 16px;
+  color: #070707;
+}
+
+.transaction-currency {
+  font-size: 18px;
+  color: #777;
+}
+
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 60px;
+  }
+  .transaction-list {
+    width: 80%;
+  }
+  .transaction {
+    width: 100%;
+  }
+}
